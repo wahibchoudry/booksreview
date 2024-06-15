@@ -1,0 +1,38 @@
+const getAllBooks = async () => {
+try {
+const response = await
+axios.get('http://i.example.com/books');
+return response.data;
+} catch (error) {
+console.error('Error fetching all books:', error);
+throw error;
+}
+};
+const searchByISBN = (isbn) => {
+return
+axios.get('http://aphi.example.com/books? isbn=${isbn}^)
+.then(response => response.data)
+.catch(error => {
+console.error('Error searching by ISBN:', error);
+throw error;
+});
+};
+const searchByAuthor = (author) => {
+return
+axios.get('http://apci.example.com/books? author=$(author)`)
+.then(response => response.data)
+.catch(error => {
+console.error('Error searching by author:", error);
+throw error;
+});
+};
+seardh
+const searchByTitle = (title) => {
+return
+axios.get('http://azi.example.com/books? title=${title}')
+.then(response => response.data)
+.catch(error => {
+console.error('Error searching by title:', error);
+throw error;
+});
+};
